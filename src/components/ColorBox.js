@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ColorBox = ({ color, isColorCorrect }) => {
+const ColorBox = ({ rgbColor, isColorCorrect }) => {
   if (isColorCorrect) {
-    return <div className="ColorBox" style={{ background: color }} />;
+    return <div className="ColorBox" style={{ background: rgbColor }} />;
   }
   return (
     <div className="ColorBox">
@@ -14,7 +14,7 @@ const ColorBox = ({ color, isColorCorrect }) => {
   );
 };
 ColorBox.propTypes = {
-  color: PropTypes.string.isRequired,
+  rgbColor: PropTypes.string.isRequired,
   isColorCorrect: PropTypes.bool.isRequired,
 };
 

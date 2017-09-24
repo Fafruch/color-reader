@@ -12,7 +12,7 @@ export const changeColor = (newColor) => {
       payload: {
         newColor: {
           isCorrect: true,
-          userColor: newColor,
+          input: newColor,
           hex: convert(color).toHexString(),
           rgb: convert(color).toRgbString(),
           hsl: convert(color).toHslString(),
@@ -25,10 +25,10 @@ export const changeColor = (newColor) => {
     payload: {
       newColor: {
         isCorrect: false,
-        userColor: newColor,
-        hex: null,
-        rgb: null,
-        hsl: null,
+        input: newColor,
+        hex: '',
+        rgb: '',
+        hsl: '',
       },
     },
   };

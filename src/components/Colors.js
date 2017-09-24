@@ -14,7 +14,7 @@ const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
                   <strong>HEX: </strong>
                 </td>
                 <td>
-                  <input value={hexColor} /> <br />
+                  <input value={hexColor} onChange={() => {}} /> <br />
                 </td>
               </tr>
               <tr>
@@ -22,7 +22,7 @@ const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
                   <strong>RGB:</strong>
                 </td>
                 <td>
-                  <input value={rgbColor} /> <br />
+                  <input value={rgbColor} onChange={() => {}} /> <br />
                 </td>
               </tr>
               <tr>
@@ -30,7 +30,7 @@ const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
                   <strong>HSL:</strong>
                 </td>
                 <td>
-                  <input value={hslColor} /> <br />
+                  <input value={hslColor} onChange={() => {}} /> <br />
                 </td>
               </tr>
             </tbody>

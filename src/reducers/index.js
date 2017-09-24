@@ -2,8 +2,8 @@ import { UPDATE_COLOR } from '../constants/index';
 
 const INITIAL_STATE = {
   color: {
-    isColorCorrect: false,
-    userColor: '',
+    isCorrect: false,
+    input: '',
     hex: '',
     rgb: '',
     hsl: '',

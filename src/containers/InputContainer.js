@@ -5,7 +5,7 @@ import Input from '../components/Input';
 import { changeColor } from '../actions/index';
 
 const mapStateToProps = state => ({
-  color: state.color.userColor,
+  inputColor: state.color.input,
 });
 
 const mapDispatchToProps = dispatch => ({

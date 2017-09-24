@@ -5,8 +5,8 @@ import InputContainer from '../containers/InputContainer';
 import ColorBoxContainer from '../containers/ColorBoxContainer';
 import ColorsContainer from '../containers/ColorsContainer';
 
-const App = ({ color }) => (
-  <div className="App" style={{ background: color === 'No such color' ? 'white' : color }}>
+const App = ({ rgbColor, isColorCorrect }) => (
+  <div className="App" style={{ background: isColorCorrect ? rgbColor : 'white' }}>
     <div className="App-header">
       <h1>Color reader</h1>
       <h3>See & convert your HEX / RGB / HSL color</h3>
@@ -23,7 +23,8 @@ const App = ({ color }) => (
   </div>
 );
 App.propTypes = {
-  color: PropTypes.string.isRequired,
+  rgbColor: PropTypes.string.isRequired,
+  isColorCorrect: PropTypes.bool.isRequired,
 };
 
 export default App;

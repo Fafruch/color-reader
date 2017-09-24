@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ color, onChange }) => (
+const Input = ({ inputColor, onChange }) => (
   <div className="Input">
     <h3>Enter a color</h3>
     <input
-      value={color}
+      value={inputColor}
       onChange={event => onChange(event.target.value)}
     />
   </div>
 );
 Input.propTypes = {
-  color: PropTypes.string.isRequired,
+  inputColor: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
