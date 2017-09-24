@@ -15,9 +15,6 @@
   border: 1px solid darkgray;
   border-radius: 1rem;
 
-/*  -webkit-box-shadow: 10px 10px 162px -46px rgba(0,0,0,0.5);
-  -moz-box-shadow: 10px 10px 162px -46px rgba(0,0,0,0.5);
-  box-shadow: 10px 10px 162px -46px rgba(0,0,0,0.5);*/
   -webkit-box-shadow: 10px 10px 200px -30px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 200px -30px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 200px -30px rgba(0,0,0,0.75);
