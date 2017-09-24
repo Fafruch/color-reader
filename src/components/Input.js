@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 const Input = ({ inputColor, onChange }) => (
   <div>
-    <h3>Enter a color</h3>
+    <span className="Input-header">Enter a color</span> <br />
     <input
+      className="Input"
       value={inputColor}
       onChange={event => onChange(event.target.value)}
     />
