@@ -21,13 +21,15 @@ const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
                     <strong>{type.name}: </strong>
                   </td>
                   <td>
-                    <input value={type.value} onChange={() => {}} /> <br />
+                    <input value={type.value} onChange={() => {}} />
                   </td>
-                  <CopyToClipboard text={hexColor}>
-                    <button>
-                      Copy
-                    </button>
-                  </CopyToClipboard>
+                  <td>
+                    <CopyToClipboard text={hexColor}>
+                      <button>
+                        Copy
+                      </button>
+                    </CopyToClipboard>
+                  </td>
                 </tr>
               ))}
             </tbody>
