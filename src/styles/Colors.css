@@ -1,6 +1,13 @@
+.Colors {
+  top: -3px;
+}
+
+.Colors-no-color {
+  top: -78px;
+}
+
 .Colors, .Colors-no-color {
   position: relative;
-  top: -3px;
   z-index: 0;
 
   width: 20rem;
@@ -8,7 +15,6 @@
 
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
 
   background: white;
 
@@ -24,11 +30,12 @@
   transition: 1s ease;
 }
 
-.Colors-no-color {
-  top: -78px;
+.Colors-text-wrapper {
+  padding-left: 1rem;
 }
 
 .Colors-no-color .Colors-text-wrapper {
+  padding-left: 0;
   padding-top: 100px;
 }
 
