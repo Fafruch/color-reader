@@ -24,7 +24,7 @@ const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
                     <input value={type.value} onChange={() => {}} />
                   </td>
                   <td>
-                    <CopyToClipboard text={hexColor}>
+                    <CopyToClipboard text={type.value}>
                       <button>
                         Copy
                       </button>

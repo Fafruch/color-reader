@@ -1,14 +1,28 @@
 .App {
-  height: 102vh;
+  height: 1100px;
   text-align: center;
   transition: 1s;
 }
 
 .App-header {
-  height: 150px;
-  padding: 20px;
-  background-color: #222;
-  color: white;
+  position: relative;
+  z-index: 0;
+  top: -1px;
+
+  width: 20rem;
+  height: 275px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+
+  background: white;
+
+  border: 1px solid darkgray;
+
+  -webkit-box-shadow: 0px 10px 101px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 101px -5px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 101px -5px rgba(0,0,0,0.75);
 }
 
 .App-intro {

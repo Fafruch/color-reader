@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Input = ({ inputColor, onChange }) => (
-  <div className="Input">
+  <div>
     <h3>Enter a color</h3>
     <input
       value={inputColor}
