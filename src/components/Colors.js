@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Colors = ({ color, isColorCorrect }) => {
+const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
   if (isColorCorrect) {
     return (
       <div className="Colors">
@@ -14,7 +14,7 @@ const Colors = ({ color, isColorCorrect }) => {
                   <strong>HEX: </strong>
                 </td>
                 <td>
-                  <input value={color} /> <br />
+                  <input value={hexColor} /> <br />
                 </td>
               </tr>
               <tr>
@@ -22,7 +22,7 @@ const Colors = ({ color, isColorCorrect }) => {
                   <strong>RGB:</strong>
                 </td>
                 <td>
-                  <input value={color} /> <br />
+                  <input value={rgbColor} /> <br />
                 </td>
               </tr>
               <tr>
@@ -30,7 +30,7 @@ const Colors = ({ color, isColorCorrect }) => {
                   <strong>HSL:</strong>
                 </td>
                 <td>
-                  <input value={color} /> <br />
+                  <input value={hslColor} /> <br />
                 </td>
               </tr>
             </tbody>
@@ -48,7 +48,9 @@ const Colors = ({ color, isColorCorrect }) => {
   );
 };
 Colors.propTypes = {
-  color: PropTypes.string.isRequired,
+  hexColor: PropTypes.string.isRequired,
+  rgbColor: PropTypes.string.isRequired,
+  hslColor: PropTypes.string.isRequired,
   isColorCorrect: PropTypes.bool.isRequired,
 };
 

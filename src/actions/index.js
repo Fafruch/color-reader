@@ -1,17 +1,21 @@
+import convert from 'css-color-converter';
+
 import { UPDATE_COLOR } from '../constants/index';
 import checkColor from '../utils/checkColor';
 
 export const changeColor = (newColor) => {
-  if (checkColor(newColor)) {
+  // Remove spaces from string
+  const color = newColor.replace(/\s/g, '');
+  if (checkColor(color) !== 'No such color') {
     return {
       type: UPDATE_COLOR,
       payload: {
         newColor: {
           isCorrect: true,
           userColor: newColor,
-          hex: '',
-          rgb: '',
-          hsl: '',
+          hex: convert(color).toHexString(),
+          rgb: convert(color).toRgbString(),
+          hsl: convert(color).toHslString(),
         },
       },
     };

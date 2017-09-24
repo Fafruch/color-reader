@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 
 import Colors from '../components/Colors';
-import checkColor from '../utils/checkColor';
 
 const mapStateToProps = state => ({
-  color: state.color.userColor,
-  isColorCorrect: checkColor(state.color.userColor) !== 'No such color',
+  hexColor: state.color.hex,
+  rgbColor: state.color.rgb,
+  hslColor: state.color.hsl,
+  isColorCorrect: state.color.isCorrect,
 });
 
 export default connect(mapStateToProps)(Colors);
