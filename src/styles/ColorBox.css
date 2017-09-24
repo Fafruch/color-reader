@@ -1,0 +1,30 @@
+.ColorBox {
+  position: relative;
+  top: -2px;
+  z-index: 10;
+  display: table;
+
+  width: 30rem;
+  height: 30rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background: white;
+
+  border: 1px solid black;
+  border-radius: 1rem;
+
+/*  -webkit-box-shadow: 10px 10px 162px -46px rgba(0,0,0,0.5);
+  -moz-box-shadow: 10px 10px 162px -46px rgba(0,0,0,0.5);
+  box-shadow: 10px 10px 162px -46px rgba(0,0,0,0.5);*/
+  -webkit-box-shadow: 10px 10px 200px -30px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 200px -30px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 200px -30px rgba(0,0,0,0.75);
+}
+
+.ColorBox-text-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 10rem;
+}
