@@ -1,38 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
   if (isColorCorrect) {
+    const colorTypes = [
+      { name: 'HEX', value: hexColor },
+      { name: 'RGB', value: rgbColor },
+      { name: 'HSL', value: hslColor },
+    ];
     return (
       <div className="Colors">
         <div className="Colors-text-wrapper">
           <h3>Copy your color</h3>
           <table>
             <tbody>
-              <tr>
-                <td className="Colors-color-type">
-                  <strong>HEX: </strong>
-                </td>
-                <td>
-                  <input value={hexColor} onChange={() => {}} /> <br />
-                </td>
-              </tr>
-              <tr>
-                <td className="Colors-color-type">
-                  <strong>RGB:</strong>
-                </td>
-                <td>
-                  <input value={rgbColor} onChange={() => {}} /> <br />
-                </td>
-              </tr>
-              <tr>
-                <td className="Colors-color-type">
-                  <strong>HSL:</strong>
-                </td>
-                <td>
-                  <input value={hslColor} onChange={() => {}} /> <br />
-                </td>
-              </tr>
+              {colorTypes.map(type => (
+                <tr key={type.name}>
+                  <td className="Colors-color-type">
+                    <strong>{type.name}: </strong>
+                  </td>
+                  <td>
+                    <input value={type.value} onChange={() => {}} /> <br />
+                  </td>
+                  <CopyToClipboard text={hexColor}>
+                    <button>
+                      Copy
+                    </button>
+                  </CopyToClipboard>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
