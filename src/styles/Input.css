@@ -7,11 +7,55 @@
   font-size: 1.17rem;
 }
 
-.Input {
+.Input-active, .Input-not-active {
   margin-top: 4px;
   padding: 5px;
+
   height: 20px;
   width: 200px;
+
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
+}
+
+.Input-active::placeholder {
+  transition: 1s;
+  color: #ccc;
+}
+.Input-active::-webkit-input-placeholder {
+  transition: 1s;
+  color: #ccc;
+}
+.Input-active:-ms-input-placeholder {
+  transition: 1s;
+  color: #ccc;
+}
+.Input-active::-moz-placeholder {
+  transition: 1s;
+  color: #ccc;
+}
+.Input-active::-moz-placeholder {
+  transition: 1s;
+  color: #ccc;
+}
+
+.Input-not-active::placeholder {
+  transition: 1s;
+  color: white;
+}
+.Input-not-active::-webkit-input-placeholder {
+  transition: 1s;
+  color: white;
+}
+.Input-not-active:-ms-input-placeholder {
+  transition: 1s;
+  color: white;
+}
+.Input-not-active::-moz-placeholder {
+  transition: 1s;
+  color: white;
+}
+.Input-not-active::-moz-placeholder {
+  transition: 1s;
+  color: white;
 }
