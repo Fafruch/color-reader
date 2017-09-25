@@ -13,7 +13,7 @@ const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
       <div className="Colors">
         <div className="Colors-text-wrapper">
           <h3>Copy your color</h3>
-          <table>
+          <table className="Colors-table">
             <tbody>
               {colorTypes.map(type => (
                 <tr key={type.name}>
@@ -21,7 +21,7 @@ const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
                     <strong>{type.name}: </strong>
                   </td>
                   <td>
-                    <input value={type.value} onChange={() => {}} />
+                    <input className="Colors-input" value={type.value} onChange={() => {}} />
                   </td>
                   <td>
                     <CopyToClipboard text={type.value}>

@@ -1,7 +1,13 @@
 .App {
-  height: 1103px;
+  height: 1043px;
   text-align: center;
   transition: 1s;
+}
+
+@media (max-width: 500px) {
+  .App {
+    height: 903px;
+  }
 }
 
 .App-header {
@@ -25,6 +31,12 @@
   box-shadow: 0 10px 101px -5px rgba(0,0,0,0.75);
 
   line-height: 140%;
+}
+
+@media (max-width: 500px) {
+  .App-header {
+    width: 240px;
+  }
 }
 
 .App-intro {

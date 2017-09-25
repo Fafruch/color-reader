@@ -24,3 +24,9 @@
   -moz-box-shadow: 0 10px 101px -5px rgba(0,0,0,0.75);
   box-shadow: 0 10px 101px -5px rgba(0,0,0,0.75);
 }
+
+@media (max-width: 500px) {
+  .Footer {
+    width: 240px;
+  }
+}

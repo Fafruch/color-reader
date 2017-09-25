@@ -4,8 +4,8 @@
   z-index: 10;
   display: table;
 
-  width: 480px;
-  height: 480px;
+  width: 420px;
+  height: 420px;
 
   margin-left: auto;
   margin-right: auto;
@@ -18,6 +18,13 @@
   -webkit-box-shadow: 10px 10px 200px -30px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 200px -30px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 200px -30px rgba(0,0,0,0.75);
+}
+
+@media (max-width: 500px) {
+  .ColorBox {
+    width: 280px;
+    height: 280px;
+  }
 }
 
 .ColorBox-text-wrapper {

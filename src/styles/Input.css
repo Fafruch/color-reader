@@ -18,6 +18,12 @@
   font-size: 1rem;
 }
 
+@media (max-width: 500px) {
+  .Input-active, .Input-not-active {
+    width: 160px;
+  }
+}
+
 .Input-active::placeholder {
   transition: 1s;
   color: #ccc;
