@@ -8,14 +8,15 @@
 }
 
 .Input-active, .Input-not-active {
-  margin-top: 4px;
-  padding: 4px;
+  margin-top: 5px;
+  padding: 8px;
 
   height: 20px;
   width: 150px;
 
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9rem;
+  font-weight: 300;
 }
 
 @media (max-width: 500px) {

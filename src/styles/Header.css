@@ -1,0 +1,14 @@
+.Header-line {
+  margin: -8px auto -15px auto;
+  width: 60%;
+  height: 1px;
+  border-width: 0;
+  color:darkgrey;
+  background-color:darkgrey;
+}
+
+@media (max-width: 500px) {
+  .Header-line {
+    width: 80%;
+  }
+}
