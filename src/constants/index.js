@@ -1,1 +1,2 @@
 export const UPDATE_COLOR = 'UPDATE_COLOR';
+export const SAVE_LAST_COPIED = 'SAVE_LAST_COPIED';
