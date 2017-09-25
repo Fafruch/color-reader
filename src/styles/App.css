@@ -1,12 +1,12 @@
 .App {
-  height: 1043px;
+  height: 1058px;
   text-align: center;
   transition: 1s;
 }
 
 @media (max-width: 500px) {
   .App {
-    height: 903px;
+    height: 918px;
   }
 }
 
