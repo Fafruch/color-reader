@@ -1,12 +1,12 @@
 .App {
-  height: 1058px;
+  height: 1053px;
   text-align: center;
   transition: 1s;
 }
 
 @media (max-width: 500px) {
   .App {
-    height: 918px;
+    height: 923px;
   }
 }
 
@@ -35,7 +35,7 @@
 
 @media (max-width: 500px) {
   .App-header {
-    width: 240px;
+    width: 250px;
   }
 }
 
