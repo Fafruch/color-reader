@@ -1,7 +1,7 @@
 # Color reader
 See & convert your HEX / RGB / HSL color
 
-![Screenshot](https://cdn.pbrd.co/images/GM0HsvB.png)
+![Screenshot](https://cdn.pbrd.co/images/GM2bXyo.png)
 
 ## See it in action
 #### DEMO: https://fafruch.github.io/color-reader
