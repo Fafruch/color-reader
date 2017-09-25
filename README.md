@@ -3,7 +3,10 @@ See & convert your HEX / RGB / HSL color
 
 ![Screenshot](https://cdn.pbrd.co/images/GM0HsvB.png)
 
- ## Installation
+## See it in action
+#### DEMO: https://fafruch.github.io/color-reader
+
+## Installation
 
 1.  Clone repo: https://github.com/Fafruch/color-reader.git
 2.  `cd color-reader`
