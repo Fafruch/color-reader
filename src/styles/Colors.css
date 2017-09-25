@@ -50,16 +50,17 @@
   text-align: right;
 }
 
-.Colors-input {
-  width: 110px;
+.Colors-color-value {
+  font-size: 0.8rem;
+  text-align: left;
 }
 
 .Colors-button-active {
-  width: 57px;
+  width: 58px;
   transition: 0.25s ease-out;
 }
 
 .Colors-button-not-active {
-  width: 47px;
+  width: 48px;
   transition: 0.25s ease-in;
 }

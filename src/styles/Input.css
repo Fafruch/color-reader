@@ -9,13 +9,13 @@
 
 .Input-active, .Input-not-active {
   margin-top: 4px;
-  padding: 5px;
+  padding: 4px;
 
   height: 20px;
-  width: 200px;
+  width: 150px;
 
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 500px) {

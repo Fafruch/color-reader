@@ -15,8 +15,8 @@ const Colors = ({ colorTypes, isColorCorrect, lastCopied, onCopy }) => {
                   <td className="Colors-color-type">
                     <strong>{type.name}: </strong>
                   </td>
-                  <td>
-                    <input className="Colors-input" value={type.value} onChange={() => {}} />
+                  <td className="Colors-color-value">
+                    {type.value}
                   </td>
                   <td>
                     <CopyToClipboard text={type.value} onCopy={onCopy}>
