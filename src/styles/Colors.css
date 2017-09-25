@@ -3,11 +3,11 @@
 }
 
 .Colors-no-color {
-  top: -78px;
+  top: -93px;
 }
 
 .Colors-no-color .Colors-text-wrapper {
-  padding-top: 100px;
+  padding-top: 115px;
 }
 
 .Colors, .Colors-no-color {
@@ -15,7 +15,7 @@
   z-index: 0;
 
   width: 320px;
-  height: 160px;
+  height: 175px;
 
   margin-left: auto;
   margin-right: auto;
