@@ -20,7 +20,11 @@ const Colors = ({ colorTypes, isColorCorrect, lastCopied, onCopy }) => {
                   </td>
                   <td>
                     <CopyToClipboard text={type.value} onCopy={onCopy}>
-                      <button>
+                      <button className={
+                        lastCopied === type.value
+                          ? 'Colors-button-active'
+                          : 'Colors-button-not-active'}
+                      >
                         {lastCopied === type.value ? 'Copied' : 'Copy'}
                       </button>
                     </CopyToClipboard>

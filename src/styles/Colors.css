@@ -53,3 +53,13 @@
 .Colors-input {
   width: 110px;
 }
+
+.Colors-button-active {
+  width: 57px;
+  transition: 0.25s ease-out;
+}
+
+.Colors-button-not-active {
+  width: 47px;
+  transition: 0.25s ease-in;
+}
