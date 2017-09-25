@@ -2,13 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
+const Colors = ({ colorTypes, isColorCorrect, lastCopied, onCopy }) => {
   if (isColorCorrect) {
-    const colorTypes = [
-      { name: 'HEX', value: hexColor },
-      { name: 'RGB', value: rgbColor },
-      { name: 'HSL', value: hslColor },
-    ];
     return (
       <div className="Colors">
         <div className="Colors-text-wrapper">
@@ -24,9 +19,13 @@ const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
                     <input className="Colors-input" value={type.value} onChange={() => {}} />
                   </td>
                   <td>
-                    <CopyToClipboard text={type.value}>
-                      <button>
-                        Copy
+                    <CopyToClipboard text={type.value} onCopy={onCopy}>
+                      <button className={
+                        lastCopied === type.value
+                          ? 'Colors-button-active'
+                          : 'Colors-button-not-active'}
+                      >
+                        {lastCopied === type.value ? 'Copied' : 'Copy'}
                       </button>
                     </CopyToClipboard>
                   </td>
@@ -47,10 +46,13 @@ const Colors = ({ hexColor, rgbColor, hslColor, isColorCorrect }) => {
   );
 };
 Colors.propTypes = {
-  hexColor: PropTypes.string.isRequired,
-  rgbColor: PropTypes.string.isRequired,
-  hslColor: PropTypes.string.isRequired,
+  colorTypes: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+  }).isRequired).isRequired,
   isColorCorrect: PropTypes.bool.isRequired,
+  lastCopied: PropTypes.string.isRequired,
+  onCopy: PropTypes.func.isRequired,
 };
 
 

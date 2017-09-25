@@ -1,6 +1,6 @@
 import convert from 'css-color-converter';
 
-import { UPDATE_COLOR } from '../constants/index';
+import { UPDATE_COLOR, SAVE_LAST_COPIED } from '../constants/index';
 import isColorCorrect from '../utils/isColorCorrect';
 
 export const changeColor = (newColor) => {
@@ -33,3 +33,11 @@ export const changeColor = (newColor) => {
     },
   };
 };
+
+export const saveLastCopied = copied => ({
+  type: SAVE_LAST_COPIED,
+  payload: {
+    copied,
+  },
+});
+

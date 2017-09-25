@@ -15,7 +15,7 @@
   z-index: 0;
 
   width: 320px;
-  height: 175px;
+  height: 170px;
 
   margin-left: auto;
   margin-right: auto;
@@ -36,7 +36,7 @@
 
 @media (max-width: 500px) {
   .Colors, .Colors-no-color {
-    width: 240px;
+    width: 250px;
   }
 }
 
@@ -52,4 +52,14 @@
 
 .Colors-input {
   width: 110px;
+}
+
+.Colors-button-active {
+  width: 57px;
+  transition: 0.25s ease-out;
+}
+
+.Colors-button-not-active {
+  width: 47px;
+  transition: 0.25s ease-in;
 }
