@@ -1,5 +1,5 @@
 .App {
-  height: 1128px;
+  height: 1103px;
   text-align: center;
   transition: 1s;
 }
@@ -10,7 +10,7 @@
   top: -1px;
 
   width: 320px;
-  height: 275px;
+  height: 250px;
 
   margin-left: auto;
   margin-right: auto;
@@ -23,6 +23,8 @@
   -webkit-box-shadow: 0 10px 101px -5px rgba(0,0,0,0.75);
   -moz-box-shadow: 0 10px 101px -5px rgba(0,0,0,0.75);
   box-shadow: 0 10px 101px -5px rgba(0,0,0,0.75);
+
+  line-height: 140%;
 }
 
 .App-intro {

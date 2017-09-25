@@ -1,7 +1,8 @@
 .Footer {
   position: relative;
   bottom: -150px;
-  padding: 0.75rem;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
   margin-right: auto;
   margin-left: auto;
@@ -15,9 +16,9 @@
   border-top:1px solid darkgray;
   border-right:1px solid darkgray;
   border-left:1px solid darkgray;
-  border-radius: 1rem 1rem 0 0;
-  -moz-border-radius: 1rem 1rem 0 0;
-  -webkit-border-radius: 1rem 1rem 0 0;
+  border-radius: 15px 15px 0 0;
+  -moz-border-radius: 15px 15px 0 0;
+  -webkit-border-radius: 15px 15px 0 0;
 
   -webkit-box-shadow: 0 10px 101px -5px rgba(0,0,0,0.75);
   -moz-box-shadow: 0 10px 101px -5px rgba(0,0,0,0.75);
