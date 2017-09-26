@@ -2,10 +2,10 @@ import convert from 'css-color-converter';
 
 import { UPDATE_COLOR, SAVE_LAST_COPIED } from '../constants/index';
 import isColorCorrect from '../utils/isColorCorrect';
+import removeSpacesFrom from '../utils/removeSpacesFrom';
 
 export const changeColor = (newColor) => {
-  // Remove spaces from string
-  const color = newColor.replace(/\s/g, '');
+  const color = removeSpacesFrom(newColor);
   if (isColorCorrect(color)) {
     return {
       type: UPDATE_COLOR,
