@@ -1,12 +1,12 @@
 .App {
-  height: 1053px;
+  height: 1048px;
   text-align: center;
   transition: 1s;
 }
 
 @media (max-width: 500px) {
   .App {
-    height: 923px;
+    height: 918px;
   }
 }
 
@@ -20,7 +20,7 @@
 
   margin-left: auto;
   margin-right: auto;
-  padding-top: 15px;
+  padding-top: 10px;
 
   background: white;
 
@@ -37,8 +37,4 @@
   .App-header {
     width: 250px;
   }
-}
-
-.App-intro {
-  font-size: large;
 }
