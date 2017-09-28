@@ -2,49 +2,46 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const placeholders = [
-  '#f83d32', 'rgb(10, 255, 213)', 'rgb(148, 259, 3)', 'hsl(39, 77%, 48%)',
-  'hsl(231, 20%, 43%)', 'hsl(0, 90%, 81%)', '#3fa1fb',
+  'hsl(0, 90%, 81%)', '#f83d32', 'hsl(39, 77%, 48%)', 'rgb(148, 259, 3)',
+  'hsl(231, 20%, 43%)', '#3fa1fb', 'rgb(10, 255, 213)',
 ];
 
 class Input extends Component {
   state = {
-    setInternalIndex: 0,
     currentPlaceholderIndex: 0,
-    activePlaceholder: true,
+    isPlaceholderActive: false,
   };
   componentDidMount() {
-    this.setupInterval();
+    // Manually invoke handleTransitionEnd on start (as there's no first transition,
+    // but we need to start it up)
+    this.handleTransitionEnd();
   }
-  componentWillUnmount() {
-    clearInterval(this.state.setInternalIndex);
-  }
-  getNewIndex = () => {
-    // enter CSS transition is 1000 (but has no impact on interval)
-    this.setState({ activePlaceholder: true });
-    // exit CSS transition is 1000
-    setTimeout(() => this.setState({ activePlaceholder: false }), 2000);
-    // 2000 + 1000 = 3000 total time
-    // Index changes when not visible, so on class .Input-not-active
-    this.setState({
-      currentPlaceholderIndex: (this.state.currentPlaceholderIndex + 1) % placeholders.length,
-    });
+  // This function is invoked two times for every placeholder - on appearing and disappearing
+  handleTransitionEnd = () => {
+    if (!this.state.isPlaceholderActive) this.generateNewPlaceholder();
+    else this.waitWithPlaceholder();
   };
-  setupInterval = () => {
-    // On launch, for first placeholder
-    setTimeout(() => this.setState({ activePlaceholder: false }), 2000);
-    // 500 not active (when interval is 3500)
-    this.setState({ setInternalIndex: setInterval(this.getNewIndex, 3500) });
-  };
+  // First time it waits some time, generates new placeholder's index,
+  // and changes input's class from 'Input-not-active' to 'Input-active'
+  generateNewPlaceholder = () => setTimeout(() => this.setState({
+    currentPlaceholderIndex: (this.state.currentPlaceholderIndex + 1) % placeholders.length,
+    isPlaceholderActive: true,
+  }), 500);
+  // Second time, when the first handleTransitionEnd finishes, it waits on a screen
+  // being visible by user and then changes input's class from 'Input-active' to 'Input-not-active'
+  waitWithPlaceholder = () => setTimeout(() => this.setState({ isPlaceholderActive: false }), 2000);
   render() {
     const { inputColor, onChange } = this.props;
+    const { currentPlaceholderIndex, isPlaceholderActive } = this.state;
     return (
       <div>
         <span className="Input-header">Enter a color</span> <br />
         <input
-          className={this.state.activePlaceholder ? 'Input-active' : 'Input-not-active'}
-          placeholder={placeholders[this.state.currentPlaceholderIndex]}
+          className={isPlaceholderActive ? 'Input-active' : 'Input-not-active'}
+          placeholder={placeholders[currentPlaceholderIndex]}
           value={inputColor}
           onChange={event => onChange(event.target.value)}
+          onTransitionEnd={this.handleTransitionEnd}
         />
       </div>
     );
