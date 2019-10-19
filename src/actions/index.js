@@ -2,10 +2,11 @@ import convert from 'css-color-converter';
 
 import { UPDATE_COLOR, SAVE_LAST_COPIED } from '../constants/index';
 import isColorCorrect from '../utils/isColorCorrect';
-import removeSpacesFrom from '../utils/removeSpacesFrom';
+import normalizeColor from '../utils/normalizeColor';
 
 export const changeColor = (newColor) => {
-  const color = removeSpacesFrom(newColor);
+  const color = normalizeColor(newColor);
+
   if (isColorCorrect(color)) {
     return {
       type: UPDATE_COLOR,
@@ -40,4 +41,3 @@ export const saveLastCopied = copied => ({
     copied,
   },
 });
-

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Header from '../components/Header';
 import InputContainer from '../containers/InputContainer';
 import ColorBoxContainer from '../containers/ColorBoxContainer';
 import ColorsContainer from '../containers/ColorsContainer';
-import Footer from '../components/Footer';
+import Header from './Header';
+import Footer from './Footer';
 
 const App = ({ rgbColor, isColorCorrect }) => (
   <div className="App" style={{ background: isColorCorrect ? rgbColor : 'white' }}>
